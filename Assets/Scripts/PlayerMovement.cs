@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movement;
     private Rigidbody2D _rigidbody2D;
 
+    [Range(5f, 30f)]   
     public float speed = 10f;
 
     private void Awake()
