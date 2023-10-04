@@ -25,7 +25,7 @@ public class RupeeManager : MonoBehaviour
     private void StopSpawning()
     {
         if (_spawnCoroutine == null) return;
-        
+
         StopCoroutine(_spawnCoroutine);
         _spawnCoroutine = null;
     }
@@ -40,6 +40,14 @@ public class RupeeManager : MonoBehaviour
     private void Spawn()
     {
         var rupee = Instantiate(rupeePrefab, spawner.position, Quaternion.identity, container);
+        rupee.OnCollected += RupeeCollectedHandler;
         _rupees.Add(rupee);
+    }
+
+    private void RupeeCollectedHandler(Rupee rupee)
+    {
+        rupee.OnCollected -= RupeeCollectedHandler;
+        _rupees.Remove(rupee);
+        Destroy(rupee.gameObject);
     }
 }
