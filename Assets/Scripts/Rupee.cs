@@ -13,6 +13,10 @@ public class Rupee : MonoBehaviour
 
     private RandomMovement _rm;
 
+    public Light pointLight;
+
+    public ParticleSystem particle;
+
     private void Awake()
     {
         _sr = GetComponent<SpriteRenderer>();
@@ -28,6 +32,9 @@ public class Rupee : MonoBehaviour
             score = _data.score;
             _sr.color = _data.color;
             _rm.speed = _data.speed;
+            pointLight.color = _data.color;
+            var pParticle = particle.main;
+            pParticle.startColor = _data.color;
         }
     }
 
