@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RupeeManager : MonoBehaviour
 {
+    private GameManager _gm;
+
     public Transform container;
     public Transform spawner;
     public Rupee rupeePrefab;
@@ -12,17 +15,17 @@ public class RupeeManager : MonoBehaviour
     private List<Rupee> _rupees = new List<Rupee>();
     private Coroutine _spawnCoroutine;
 
-    private void Start()
+    private void Awake()
     {
-        StartSpawning();
+        _gm = GameManager.Instance;
     }
 
-    private void StartSpawning()
+    public void StartSpawning()
     {
         _spawnCoroutine = StartCoroutine(SpawnCoroutine());
     }
 
-    private void StopSpawning()
+    public void StopSpawning()
     {
         if (_spawnCoroutine == null) return;
 
@@ -48,6 +51,7 @@ public class RupeeManager : MonoBehaviour
     {
         rupee.OnCollected -= RupeeCollectedHandler;
         _rupees.Remove(rupee);
+        _gm.ScoreManager.AddScore(rupee.score);
         Destroy(rupee.gameObject);
     }
 }
