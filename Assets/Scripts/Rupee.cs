@@ -5,13 +5,36 @@ public class Rupee : MonoBehaviour
 {
     public event Action<Rupee> OnCollected;
 
-    public int score = 1;
+    public int score = 0;
+
+    private RupeeData _data;
+
+    private SpriteRenderer _sr;
+
+    private RandomMovement _rm;
+
+    private void Awake()
+    {
+        _sr = GetComponent<SpriteRenderer>();
+        _rm = GetComponent<RandomMovement>();
+    }
+
+    public RupeeData Data
+    {
+        get => _data;
+        set
+        {
+            _data = value;
+            score = _data.score;
+            _sr.color = _data.color;
+            _rm.speed = _data.speed;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Collected rupee");
             OnCollected?.Invoke(this);
         }
     }

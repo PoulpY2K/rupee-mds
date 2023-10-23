@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public RupeeManager RupeeManager { get; private set; }
     public TimeManager TimeManager { get; private set; }
     public UIManager UIManager { get; private set; }
-    
+    public AudioManager AudioManager { get; private set; }
 
     private void Awake()
     {
@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
         RupeeManager = GetComponent<RupeeManager>();
         TimeManager = GetComponent<TimeManager>();
         UIManager = GetComponent<UIManager>();
+        AudioManager = GetComponent<AudioManager>();
     }
 
     private void Start()
@@ -28,7 +29,7 @@ public class GameManager : MonoBehaviour
         TimeManager.OnTimeUp += TimeUpHandler;
     }
 
-    private void TimeUpHandler()    
+    private void TimeUpHandler()
     {
         StopGame();
     }
@@ -36,14 +37,16 @@ public class GameManager : MonoBehaviour
     private void StopGame()
     {
         UIManager.StopGame();
-        //RupeeManager.StopSpawning();
+        RupeeManager.Reset();
         TimeManager.StopGame();
+        AudioManager.StopGame();
     }
 
     public void StartGame()
     {
         ScoreManager.Reset();
         RupeeManager.StartSpawning();
+        AudioManager.StartGame();
         TimeManager.StartGame();
         UIManager.StartGame();
     }
