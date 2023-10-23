@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         RupeeManager.Reset();
         TimeManager.StopGame();
         AudioManager.StopGame();
+        AudioManager.FinishSound();
     }
 
     public void StartGame()

@@ -3341,6 +3341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 8300000, guid: 31039b393b805437a8364820e69688fd, type: 3}
+  endClip: {fileID: 8300000, guid: 668cb1f04983543ddad3d964ebb380b8, type: 3}
   source: {fileID: 1581278874}
 --- !u!4 &649836948 stripped
 Transform:
@@ -7744,7 +7745,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time remaining: 20'
+  m_text: 'Time remaining: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a1c6ed1d16964e5d9e4adcc3e41ab2d, type: 2}
   m_sharedMaterial: {fileID: -106548147892052421, guid: 9a1c6ed1d16964e5d9e4adcc3e41ab2d, type: 2}
