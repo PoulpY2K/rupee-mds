@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
     {
         score.text = $"Score: {_gm.ScoreManager.Score}";
         bestScore.text = $"Best score: {_gm.ScoreManager.BestScore}";
-        timeRemaining.text = $"Temps: {Math.Ceiling(_gm.TimeManager.Remaining)}";
+        timeRemaining.text = $"Time remaining: {Math.Ceiling(_gm.TimeManager.Remaining)}";
     }
 
     public void StartGame()

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 420ab37e6c5ed40189ecc5a7329e225c, type: 3}
-  m_Name: RupeeGreenData
+  m_Name: RupeeBlueData
   m_EditorClassIdentifier: 
-  color: {r: 0.3160377, g: 1, b: 0.3867925, a: 1}
-  score: 1
-  speed: 7
-  collectClip: {fileID: 8300000, guid: 6068a8f1e3016467daa92d45a3778520, type: 3}
+  color: {r: 0.4575472, g: 0.58199215, b: 1, a: 1}
+  score: 10
+  speed: 9
+  collectClip: {fileID: 8300000, guid: a1757b5ef67b54217a2787c2a5888356, type: 3}

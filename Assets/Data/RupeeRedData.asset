@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420ab37e6c5ed40189ecc5a7329e225c, type: 3}
   m_Name: RupeeRedData
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0.38117698, b: 0.3160377, a: 1}
+  color: {r: 1, g: 0.5958195, b: 0.5518868, a: 1}
   score: 5
-  speed: 9
+  speed: 8
   collectClip: {fileID: 8300000, guid: c9d6f742074ce46558bc6886840ce9df, type: 3}

@@ -3272,6 +3272,8 @@ MonoBehaviour:
   rupeesData:
   - {fileID: 11400000, guid: 059b9ca2d4f3241eebc44a929f46a1de, type: 2}
   - {fileID: 11400000, guid: 8d7235fe1ef6641fc998b61f25509227, type: 2}
+  - {fileID: 11400000, guid: 7a502c532a60f874e9c6cfa5553c46db, type: 2}
+  - {fileID: 11400000, guid: 84c84cbdc92a8c448857eef3961f60bb, type: 2}
   rupeeAudioSource: {fileID: 127383558}
 --- !u!114 &649702325
 MonoBehaviour:
@@ -7742,7 +7744,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Temps: 0'
+  m_text: 'Time remaining: 20'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a1c6ed1d16964e5d9e4adcc3e41ab2d, type: 2}
   m_sharedMaterial: {fileID: -106548147892052421, guid: 9a1c6ed1d16964e5d9e4adcc3e41ab2d, type: 2}

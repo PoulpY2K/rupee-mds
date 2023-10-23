@@ -4,7 +4,7 @@ public class RandomMovement : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
 
-    public float speed = 9f;
+    public float speed = 0f;
 
     private void Awake()
     {
